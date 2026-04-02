@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini CRM Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+
+  <!-- LEFT SIDE BRANDING -->
+  <div class="login-left">
+    <h1>Mini CRM</h1>
+    <p>Manage your leads efficiently.<br>
+       Track, follow up, and convert clients easily.</p>
+  </div>
+
+  <!-- RIGHT SIDE LOGIN CARD -->
+  <div class="login-card">
+    <h2>Welcome Back 👋</h2>
+    <p>Login to continue</p>
+
+    <!-- ✅ Form added -->
+    <form autocomplete="off">
+
+      <!-- 🔥 Fake fields (Chrome trap) -->
+      <input type="text" name="fakeuser" style="display:none">
+      <input type="password" name="fakepass" style="display:none">
+
+      <!-- ✅ Real inputs with changed names -->
+      <input 
+        type="text" 
+        id="username" 
+        name="user_login_123"
+        placeholder="Username"
+        autocomplete="off"
+      >
+
+      <input 
+        type="password" 
+        id="password" 
+        name="pass_login_456"
+        placeholder="Password"
+        autocomplete="new-password"
+      >
+
+      <button type="button" onclick="login()">Login</button>
+
+    </form>
+
+    <p id="error"></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

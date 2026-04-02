@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini CRM Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Mini CRM</h1>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- STATS CARDS -->
+  <div class="cards">
+    <div class="card">
+      <h3>Total Leads</h3>
+      <p id="totalLeads">0</p>
+    </div>
+    <div class="card">
+      <h3>Contacted</h3>
+      <p id="contactedLeads">0</p>
+    </div>
+    <div class="card">
+      <h3>Converted</h3>
+      <p id="convertedLeads">0</p>
+    </div>
+  </div>
+
+  <!-- ADD LEAD CARD -->
+  <div class="form-card">
+    <h2>Add New Lead</h2>
+
+    <!-- ✅ Form added -->
+    <form autocomplete="off">
+
+      <!-- 🔥 Fake fields (Chrome trap) -->
+      <input type="text" name="fakeuser" style="display:none">
+      <input type="password" name="fakepass" style="display:none">
+
+      <!-- ✅ Real inputs -->
+      <input 
+        id="name" 
+        name="lead_name_123"
+        placeholder="Name"
+        autocomplete="off"
+      >
+
+      <input 
+        id="email" 
+        name="lead_email_456"
+        placeholder="Email"
+        autocomplete="off"
+      >
+
+      <select 
+        id="source" 
+        name="lead_source_789"
+        autocomplete="off"
+      >
+        <option value="">Select Source</option>
+        <option>Website</option>
+        <option>Instagram</option>
+        <option>LinkedIn</option>
+        <option>Referral</option>
+        <option>WhatsApp</option>
+      </select>
+
+      <button type="button" onclick="addLead()">Add Lead</button>
+
+    </form>
+  </div>
+
+  <!-- TABLE CARD -->
+  <div class="table-card">
+    <h2>All Leads</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Notes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="leadTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
